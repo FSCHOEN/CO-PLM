@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#"
+     xml:base="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:om-2="http://www.ontology-of-units-of-measure.org/resource/om-2/"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl">
+        <owl:imports rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl"/>
+        <owl:imports rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#hasBillOfMaterials -->
+
+    <owl:ObjectProperty rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#hasBillOfMaterials">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationEntity"/>
+        <rdfs:range rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#BillOfMaterials"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#BillOfMaterials -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#BillOfMaterials">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#PartEntry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#CircuitDiagram -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#CircuitDiagram">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#HydraulicPlan -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#HydraulicPlan">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#PartEntry -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#PartEntry">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#BillOfMaterials"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartForm -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartForm">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartManual -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartManual">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartForm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartMetainformation -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartMetainformation">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartSpecification -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartSpecification">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartForm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartTestReport -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartTestReport">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#ProductPartForm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#2DProductPartModel -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#2DProductPartModel">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#3DProductPartModel -->
+
+    <owl:Class rdf:about="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#3DProductPartModel">
+        <rdfs:subClassOf rdf:resource="https://www.kd.informatik.uni-kiel.de/en/research/ontologies/SecPLM/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
