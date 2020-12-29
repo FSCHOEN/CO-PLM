@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#"
+     xml:base="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationRealization.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#hasProductPartConfiguration -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#hasProductPartConfiguration">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationEntity"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartSituation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ApprovalStatusParameter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ApprovalStatusParameter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ApprovalStatusRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ApprovalStatusRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#BillOfMaterialsRole -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#BillOfMaterialsRole">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#BillOfMaterials"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#BillOfMaterials"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#GeometricalProductPartInformationRole -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#GeometricalProductPartInformationRole">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#GeometricalProductPartInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#LevelOfConfidentialityParameter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#LevelOfConfidentialityParameter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#LevelOfConfidentialityRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#LevelOfConfidentialityRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#PhysicalProductPart -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#PhysicalProductPart">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationRealization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartMaster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPart -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPart">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartDescription -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartDescription">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#TimeParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#describes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartFormRole -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartFormRole">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#ProductPartForm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#ProductPartForm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartMaster -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartMaster">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#PhysicalProductPart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartMetainformationRole -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartMetainformationRole">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartInformationObjectRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#ProductPartMetainformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#ProductPartMetainformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartSituation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ProductPartInformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#ApprovalStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#LevelOfConfidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationObject.owl#BillOfMaterials"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#TimeParameter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#TimeParameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#VersionParameter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#VersionParameter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPart.owl#ProductPartParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#VersionRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/FSCHOEN/CO-PLM/master/Ontology_Patterns/ProductPartInformationEntity.owl#VersionRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
