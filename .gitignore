@@ -1,0 +1,6 @@
+*.log
+*.aux
+*.out
+*.gz
+*~lock*
+*catalog-v001.xml
